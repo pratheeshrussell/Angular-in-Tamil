@@ -1,0 +1,10 @@
+<div class="fullcontainer container-fluid min-vh-100 row d-flex justify-content-center align-items-start py-5">
+<div class="col-3">
+    <!-- Set message component -->
+    <app-setmessage (onMessage)='setMessage($event)'></app-setmessage>
+    <!-- Show message component -->
+    <app-showmessage [message]="message" *ngIf="message != ''">
+        <div class="header" #header>Message</div>
+    </app-showmessage>
+</div>
+</div>

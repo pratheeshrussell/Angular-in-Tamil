@@ -1,0 +1,11 @@
+<div class="message-card card my-5" >
+    <div class="card-body d-flex-column align-items-center justify-content-start">
+        <h5 class="card-title">
+          <ng-content select=".header"></ng-content>
+        </h5>
+        <p class="card-text" #messageitm>{{message}}</p>
+        <div class="d-flex align-items-center justify-content-end">
+          <button class="btn btn-success" (click)="changeMessage()">Change message</button>
+        </div>
+      </div>
+</div>
