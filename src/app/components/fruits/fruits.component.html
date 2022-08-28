@@ -1,0 +1,12 @@
+<app-card>
+    <p class="header">Add Fruit</p>
+    <app-add-fruit (fruit-added)="addFruit($event)"></app-add-fruit>
+</app-card>
+
+<h1>Fruits List</h1>
+
+<app-fruit *ngFor="let fruit of fruitList;let i = index"
+ [fruit]="fruit" [index]="i" (removeFunction)="removeAtIndex($event)">
+    <p>This is a fruit</p>
+</app-fruit>
+
