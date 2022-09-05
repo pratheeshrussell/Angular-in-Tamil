@@ -1,0 +1,44 @@
+<div class="vh-100 vw-100 p-5" >
+    <div class="container d-flex flex-column justify-content-start align-items-center">
+        
+        <!-- <div *ngFor="let user of userData;" class="card border-secondary mb-3"  style="width:40% ;">
+            <div class="card-header">{{user.name}}</div>
+            <div class="card-body text-secondary">
+              <p class="card-title"><strong>{{user.name}}</strong></p>
+              <p class="card-text">Email: {{user.email}}</p>
+              <p class="card-text">Phone: {{user.phone}}</p>
+            </div>
+        </div> -->
+
+        <!-- <ng-template ngFor [ngForOf]="userData" let-user="$implicit" let-i="index" let-a>
+            <div  class="card border-secondary mb-3"  style="width:40% ;">
+                <div class="card-header">{{i}} {{user.name}}</div>
+                <div class="card-body text-secondary">
+                  <p class="card-title"><strong>{{user.name}}</strong></p>
+                  <p class="card-text">Email: {{user.email}}</p>
+                  <p class="card-text">Phone: {{user.phone}}</p>
+                </div>
+            </div>
+        </ng-template> -->
+
+        <!-- <ng-template appTwinkle [appTwinkleWait]="1500" [appTwinkleReplace]="shownow">
+            <p>Twinkle twinkle</p>
+        </ng-template> -->
+
+
+        <div *appTwinkle="let time replace shownow;wait 5000;let t='wait';let c = 'counter';let p">
+            <p>Twinkle twinkle</p>
+            <p>Time {{time}}</p>
+            <p>countdown {{c}}</p>
+        </div>
+
+        <ng-template #shownow let-c="counter">
+            <p>Little star</p>
+            <p>{{c}}</p>
+        </ng-template>
+
+
+
+
+    </div>
+</div>
