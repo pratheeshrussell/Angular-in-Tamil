@@ -1,0 +1,10 @@
+<app-card [isHighlight]="isHighlight">
+<div class="row" (click)="highLightElem()">
+<div class="col-9" #fruitItem>
+    
+    <span>{{fruitName}}</span></div>
+<div class="col-3">
+    <button type="button" class="btn btn-sm btn-danger mx-2" (click)="removeFruit()">Remove</button>
+</div>
+</div>
+</app-card>

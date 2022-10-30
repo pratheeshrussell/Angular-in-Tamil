@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-6">
+        <input type="text" appInputvalidate 
+        [borderColor]="ErrBorderColor" 
+        borderNormalColor="black" (onError)="handleError($event)"
+        #addFruitInput >
+        <p *ngIf="isError" class="errClass">Please fill in the field</p>
+    </div>
+    <div class="col-4">
+        <button class="btn btn-primary" (click)="emitNewFruit()">Add Fruit</button>
+    </div>
+</div>
